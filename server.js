@@ -36,7 +36,8 @@ server.on('request',function(req,res)
 				{
 					if(ERR)
 					{
-						throw ERR;
+						console.log('未知错误');
+						return;
 					}
 					sr='./html/404';
 					mark=1;
@@ -63,7 +64,8 @@ server.on('request',function(req,res)
 			{
 				if(ERR)
 				{
-					throw ERR;
+					console.log('未知错误');
+					return;
 				}
 				sr='./html/404';
 				mark=1;
@@ -75,7 +77,4 @@ server.on('request',function(req,res)
 		});
 	}
 });
-server.listen(3000,function()
-{
-	console.log('server is listening at port 3000');
-});
+server.listen(80);
